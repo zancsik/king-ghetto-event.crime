@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Ghetto — CRIME Event</title>
+
+    <style>
+        /* Анімований градієнт фону */
+        body {
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+            color: white;
+            background: linear-gradient(135deg, #0d001f, #2d0054, #1a0037);
+            background-size: 300% 300%;
+            animation: bgMove 12s ease infinite;
+        }
+
+        @keyframes bgMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Меню */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 0, 35, 0.85);
+            backdrop-filter: blur(7px);
+            padding: 15px 0;
+            z-index: 99;
+            box-shadow: 0 0 15px rgba(170, 0, 255, 0.4);
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        nav li {
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        nav li:hover {
+            color: #d27cff;
+            transform: scale(1.1);
+        }
+
+        header {
+            padding: 120px 20px 40px;
+            text-align: center;
+            font-size: 42px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px rgba(200, 0, 255, 0.6);
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding-bottom: 50px;
+        }
+
+        h2 {
+            margin-top: 60px;
+            font-size: 32px;
+            color: #e088ff;
+            border-left: 6px solid #e088ff;
+            padding-left: 12px;
+            opacity: 0;
+            animation: fadeIn 0.9s ease forwards;
+        }
+
+        .block {
+            background: rgba(0, 0, 0, 0.35);
+            padding: 25px 30px;
+            border-radius: 12px;
+            margin-top: 15px;
+            line-height: 1.7;
+            box-shadow: 0 0 20px rgba(150, 0, 255, 0.25);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 0.8s ease forwards;
+        }
+
+        /* Анімації */
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Фото */
+        .images {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .images img {
+            width: 100%;
+            border-radius: 14px;
+            border: 2px solid #b24dff;
+            box-shadow: 0 0 20px rgba(170, 70, 255, 0.5);
+            transition: 0.3s;
+        }
+
+        .images img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 25px rgba(200, 100, 255, 0.8);
+        }
+
+        /* Кнопка музики */
+        .music-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #b300ff;
+            border: none;
+            padding: 15px 22px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 0 15px rgba(190, 0, 255, 0.5);
+            transition: 0.3s;
+            z-index: 999;
+        }
+
+        .music-btn:hover {
+            transform: scale(1.1);
+            background: #d14dff;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 40px 0;
+            color: #aaa;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li onclick="scrollToID('opis')">Опис</li>
+        <li onclick="scrollToID('syt')">Суть</li>
+        <li onclick="scrollToID('fractions')">Фракції</li>
+        <li onclick="scrollToID('rules')">Правила</li>
+        <li onclick="scrollToID('locations')">Локації</li>
+    </ul>
+</nav>
+
+<header>KING GHETTO — CRIME EVENT</header>
+
+<div class="container">
+
+    <h2 id="opis">ОПИС</h2>
+    <div class="block">
+        Захід має формат ООС та проводиться в суботу з <b>22:00 до 22:30</b> за київським часом.  
+        Участь беруть всі CRIME фракції.
+    </div>
+
+    <h2 id="syt">Суть заходу</h2>
+    <div class="block">
+        Всі фракції збираються на титульних територіях до 21:50, після сигналу в Discord заходять на ТП.<br><br>
+
+        <b>Точки:</b>
+        <ul>
+            <li>Площа — 1, 2, 3 (Сьогодні)</li>
+            <li>Муравейник — 1, 2, 3</li>
+            <li>Титул Вагос — 1, 2, 3</li>
+        </ul>
+
+        <b>Очки:</b><br>
+        • Точка 1 — 300 / 5 хв<br>
+        • Точка 2 — 250 / 5 хв<br>
+        • Точка 3 — 200 / 5 хв<br><br>
+
+        <b>Винагороди:</b><br>
+        • 1 очко → матеріал<br>
+        • 15 → держ. аптека<br>
+        • 30 → адреналін<br>
+        • 50 → Джек Деніелс<br>
+        • 500 → 3 лідерські бали<br><br>
+
+        О 22:15 — ТП для RK на 1 хвилину. (/tp 1)
+    </div>
+
+    <h2 id="fractions">Фракції</h2>
+    <div class="block">
+        <ul>
+            <li>1. Kyiv Mafia (/tp 1)</li>
+            <li>2. Chinese Mafia (/tp2)</li>
+            <li>3. Italian Mafia (/tp 3)</li>
+            <li>4. The Families (/tp 4)</li>
+            <li>5. Ballas Gang (/tp 5)</li>
+            <li>6. Northside Vagos (/tp 6)</li>
+            <li>7. Marabunta Grande (/tp 7)</li>
+        </ul>
+    </div>
+
+    <h2 id="rules">Правила</h2>
+    <div class="block">
+        <ul>
+            <li>10–20 учасників від фракції.</li>
+            <li>Не завдавати шкоди до старту.</li>
+            <li>Після ТП — йти на свої точки.</li>
+            <li>Заборонено пересуватись транспортом.</li>
+            <li>Заборонено тазер/держ. броню.</li>
+            <li>Заборонено баг анімації.</li>
+            <li>Обов'язкова зброя.</li>
+            <li>Фракційні кольори.</li>
+            <li>Союзи заборонені.</li>
+            <li>Пропуск старшими — мінус 5 балів.</li>
+            <li>У зоні RK не стріляти до виходу з неї.</li>
+            <li>Не зайшли до 22:00 — виліт.</li>
+            <li>Після RK — зона зникає.</li>
+            <li>Заборонено снайперки та мушкет.</li>
+        </ul>
+    </div>
+
+    <h2 id="locations">Локації та точки</h2>
+    <div class="images">
+        <img src="kingGHETTO(площа).png" alt="Локація Площа">
+        <img src="точка1(площа).png" alt="Точка 1">
+        <img src="точка2(площа).png" alt="Точка 2">
+        <img src="точка3(площа).png" alt="Точка 3">
+    </div>
+
+</div>
+
+<footer>© 2025 KING GHETTO — CRIME EVENT</footer>
+
+
+<!-- Музика -->
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">🎵 Music</button>
+
+<script>
+    function scrollToID(id) {
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    }
+
+    let music = document.getElementById("bgMusic");
+    let playing = false;
+
+    function toggleMusic() {
+        if (!playing) {
+            music.play();
+            playing = true;
+        } else {
+            music.pause();
+            playing = false;
+        }
+    }
+</script>
+
+</body>
+</html>
